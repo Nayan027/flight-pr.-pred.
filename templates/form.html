@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="", method="post">
+    {{form.hidden_tag()}}
+    <div>
+        {{form.Airline.label}}
+        {{form.Airline}}
+        {% if form.Airline.errors %}
+            {% for error in form.Airline.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Date_of_Journey.label}}
+        {{form.Date_of_Journey}}
+        {% if form.Date_of_Journey.errors %}
+            {% for error in form.Date_of_Journey.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Source.label}}
+        {{form.Source}}
+        {% if form.Source.errors %}
+            {% for error in form.Source.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Destination.label}}
+        {{form.Destination}}
+        {% if form.Destination.errors %}
+            {% for error in form.Destination.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Dep_Time.label}}
+        {{form.Dep_Time}}
+        {% if form.Dep_Time.errors %}
+            {% for error in form.Dep_Time.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Arrival_Time.label}}
+        {{form.Arrival_Time}}
+        {% if form.Arrival_Time.errors %}
+            {% for error in form.Arrival_Time.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Duration.label}}
+        {{form.Duration}}
+        {% if form.Duration.errors %}
+            {% for error in form.Duration.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Total_Stops.label}}
+        {{form.Total_Stops}}
+        {% if form.Total_Stops.errors %}
+            {% for error in form.Total_Stops.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Additional_Info.label}}
+        {{form.Additional_Info}}
+        {% if form.Additional_Info.errors %}
+            {% for error in form.Additional_Info.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>{{form.submit()}}</div>
+    <br>
+    <div>{{output}}</div>
+
+
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%endblock content%}
